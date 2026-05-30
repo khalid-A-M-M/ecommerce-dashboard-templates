@@ -1,0 +1,20 @@
+Total Revenue = SUM(Orders[revenue])
+
+Total Cost = SUM(Orders[cost])
+
+Net Profit = SUM(Orders[profit])
+
+Total Orders = DISTINCTCOUNT(Orders[order_id])
+
+Average Order Value = DIVIDE([Total Revenue], [Total Orders])
+
+Ad Spend = SUM(Orders[ad_spend])
+
+ROAS = DIVIDE([Total Revenue], [Ad Spend])
+
+Weekly Growth % =
+    DIVIDE(
+        [Total Revenue] - CALCULATE([Total Revenue], DATEADD(Dates[Date], -7, DAY)),
+        CALCULATE([Total Revenue], DATEADD(Dates[Date], -7, DAY))
+    )
+

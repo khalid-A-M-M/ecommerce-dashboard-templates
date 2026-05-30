@@ -1,0 +1,11 @@
+order_id,date,product_name,revenue,cost,profit,quantity,ad_spend,status
+1001,2026-05-01,Salla Starter Kit,120.00,55.00,65.00,1,18.00,paid
+1003,2026-05-02,Salla Starter Kit,240.00,110.00,130.00,2,30.00,paid
+1004,2026-05-03,Premium Abaya,310.50,140.00,170.50,1,42.00,paid
+1005,2026-05-03,Premium Abaya,315.00,140.00,175.00,1,39.00,paid
+1006,2026-05-04,Leather Wallet,90.00,38.00,52.00,1,12.00,paid
+1007,2026-05-04,Leather Wallet,180.00,76.00,104.00,2,20.00,paid
+1008,2026-05-05,Smart Watch,450.00,270.00,180.00,1,65.00,paid
+1010,2026-05-06,Kids Backpack,75.00,32.00,43.00,1,10.00,paid
+1011,2026-05-07,Kids Backpack,150.00,64.00,86.00,2,18.00,paid
+1012,2026-05-08,Premium Abaya,620.00,280.00,340.00,2,70.00,paid
