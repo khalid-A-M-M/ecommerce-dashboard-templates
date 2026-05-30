@@ -5,9 +5,11 @@ Thumbs.db
 *.pbix
 *.xlsx
 *.xls
+*.zip
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
 .env
 .env.*
-
+06_Case_Study_Online_Retail/data/Online_Retail.xlsx
+06_Case_Study_Online_Retail/data/extracted/

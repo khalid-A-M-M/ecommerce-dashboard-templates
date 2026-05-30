@@ -1,0 +1,14 @@
+{
+  "source_rows": 541909,
+  "clean_rows": 530104,
+  "date_start": "2010-12-01",
+  "date_end": "2011-12-09",
+  "total_revenue": 10666684.544,
+  "orders": 19960,
+  "customers": 4338,
+  "countries": 38,
+  "products": 3922,
+  "average_order_value": 534.403033266533,
+  "top_country": "United Kingdom",
+  "top_product": "Dotcom Postage"
+}

@@ -24,6 +24,7 @@ Turn messy ecommerce sales data into an auto-updating Power BI dashboard.
 | `03_Proposals` | Freelance and outreach message drafts |
 | `04_Portfolio_Demo` | Dummy data and public GitHub demo material |
 | `05_Portfolio_Images` | Client-facing portfolio images |
+| `06_Case_Study_Online_Retail` | Real open-data client-style case study |
 
 ## Portfolio Images
 
@@ -34,6 +35,14 @@ Use these images in Mostaql, LinkedIn, WhatsApp, and client proposals.
 ![Before and after data cleaning](05_Portfolio_Images/before_after_data.png)
 
 ![Service packages](05_Portfolio_Images/service_packages.png)
+
+## Real Data Case Study
+
+This repository also includes a client-style case study built from the UCI Online Retail open dataset.
+
+![Online retail dashboard case study](06_Case_Study_Online_Retail/assets/online_retail_dashboard.png)
+
+Case folder: `06_Case_Study_Online_Retail`
 
 ## Delivery Rhythm
 
