@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Packages</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Segoe UI", sans-serif;
+      background: #101828;
+      color: #fff;
+    }
+    .wrap {
+      width: 1500px;
+      height: 900px;
+      margin: 0 auto;
+      padding: 56px;
+      background: linear-gradient(135deg, #101828 0%, #1d2939 55%, #0f766e 100%);
+    }
+    h1 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin: 12px 0 42px;
+      color: #d0d5dd;
+      font-size: 23px;
+      max-width: 980px;
+      line-height: 1.6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card {
+      min-height: 520px;
+      background: rgba(255, 255, 255, .96);
+      color: #142033;
+      border-radius: 8px;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, .3);
+    }
+    .card.featured {
+      border: 4px solid #2dd4bf;
+      transform: translateY(-12px);
+    }
+    .name {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 44px;
+      font-weight: 800;
+      direction: ltr;
+      text-align: right;
+      margin-bottom: 22px;
+      color: #0f766e;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 18px;
+      font-size: 22px;
+      line-height: 1.45;
+    }
+    li {
+      padding-right: 28px;
+      position: relative;
+    }
+    li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #14b8a6;
+      position: absolute;
+      right: 0;
+      top: 12px;
+    }
+    .footer {
+      margin-top: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #e4e7ec;
+      font-size: 22px;
+    }
+    .pill {
+      border: 1px solid rgba(255,255,255,.5);
+      padding: 12px 18px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>خدمة تحويل بيانات المتجر إلى Dashboard خلال 5 أيام</h1>
+    <div class="sub">للعملاء الذين يريدون معرفة الإيرادات، الأرباح، الطلبات، أفضل المنتجات، ونتائج الإعلانات بدون تجميع يدوي أسبوعي.</div>
+
+    <section class="cards">
+      <article class="card">
+        <div class="name">Starter</div>
+        <div class="price">$600</div>
+        <ul>
+          <li>لوحة Power BI واحدة</li>
+          <li>مصدر بيانات واحد</li>
+          <li>تنظيف بيانات الطلبات</li>
+          <li>Revenue, Profit, Orders, AOV</li>
+          <li>شرح تسليم مختصر</li>
+        </ul>
+      </article>
+      <article class="card featured">
+        <div class="name">Standard</div>
+        <div class="price">$900</div>
+        <ul>
+          <li>لوحتان في Power BI</li>
+          <li>ربط API أو Google Sheet</li>
+          <li>مصدر إضافي للإعلانات أو التكلفة</li>
+          <li>ROAS وأداء المنتجات</li>
+          <li>توثيق PDF بسيط</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="name">Pro</div>
+        <div class="price">$1,200</div>
+        <ul>
+          <li>ثلاث لوحات تحليلية</li>
+          <li>Power Automate أو Apps Script</li>
+          <li>تقرير PDF أسبوعي</li>
+          <li>تحليل أعمق للإعلانات والمنتجات</li>
+          <li>7 أيام دعم بعد التسليم</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="footer">
+      <span class="pill">50% مقدماً - 50% عند التسليم</span>
+      <span>Data-to-Dashboard Automation Sprint</span>
+    </div>
+  </main>
+</body>
+</html>
+

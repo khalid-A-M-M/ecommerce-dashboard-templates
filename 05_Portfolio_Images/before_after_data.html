@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Before After Data Cleaning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Segoe UI", sans-serif;
+      background: #f7f9fc;
+      color: #152033;
+    }
+    .wrap {
+      width: 1500px;
+      height: 900px;
+      margin: 0 auto;
+      padding: 48px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 44px;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin: 10px 0 30px;
+      font-size: 22px;
+      color: #617086;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #dbe5f0;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(38, 57, 83, .06);
+    }
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+    .tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 17px;
+    }
+    .bad { color: #991b1b; background: #fee2e2; }
+    .good { color: #065f46; background: #d1fae5; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      direction: ltr;
+      font-size: 17px;
+    }
+    th, td {
+      border-bottom: 1px solid #e7edf5;
+      padding: 13px 10px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      color: #5f6e83;
+      font-weight: 700;
+      background: #f5f8fc;
+    }
+    .issue { color: #b42318; font-weight: 700; }
+    .ok { color: #067647; font-weight: 700; }
+    .flow {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .step {
+      background: #142033;
+      color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 120px;
+    }
+    .step b {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .step span {
+      color: #cbd5e1;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>من بيانات فوضوية إلى ملف جاهز للوحة Power BI</h1>
+    <div class="sub">هذا هو الجزء الذي لا يراه العميل عادة، لكنه السبب في أن الأرقام تصبح صحيحة.</div>
+
+    <section class="split">
+      <div class="panel">
+        <h2>قبل التنظيف</h2>
+        <div class="tag bad">مشاكل: تواريخ مختلفة، أسماء مكررة، طلبات ملغية، أرقام كنص</div>
+        <table>
+          <thead><tr><th>order_id</th><th>date</th><th>product</th><th>revenue</th><th>status</th></tr></thead>
+          <tbody>
+            <tr><td>1002</td><td>05/02/2026</td><td>salla starter kit</td><td class="issue">0</td><td>cancelled</td></tr>
+            <tr><td>1003</td><td>2026/05/02</td><td>SALLA Starter Kit</td><td>240.00</td><td>paid</td></tr>
+            <tr><td>1005</td><td>03-05-2026</td><td>premium abaya</td><td class="issue">315 SAR</td><td>paid</td></tr>
+            <tr><td>1009</td><td>2026-05-06</td><td>smart watch</td><td>449.00</td><td class="issue">refunded</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>بعد التنظيف</h2>
+        <div class="tag good">جاهز: تاريخ موحد، منتجات موحدة، ربح محسوب، طلبات صحيحة فقط</div>
+        <table>
+          <thead><tr><th>order_id</th><th>date</th><th>product</th><th>revenue</th><th>profit</th></tr></thead>
+          <tbody>
+            <tr><td>1001</td><td>2026-05-01</td><td>Salla Starter Kit</td><td>120.00</td><td class="ok">65.00</td></tr>
+            <tr><td>1003</td><td>2026-05-02</td><td>Salla Starter Kit</td><td>240.00</td><td class="ok">130.00</td></tr>
+            <tr><td>1005</td><td>2026-05-03</td><td>Premium Abaya</td><td>315.00</td><td class="ok">175.00</td></tr>
+            <tr><td>1012</td><td>2026-05-08</td><td>Premium Abaya</td><td>620.00</td><td class="ok">340.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="flow">
+      <div class="step"><b>1. استلام البيانات</b><span>CSV, Excel, Google Sheets أو API من المتجر.</span></div>
+      <div class="step"><b>2. تنظيف البيانات</b><span>توحيد التواريخ، المنتجات، الإيرادات، والحالات.</span></div>
+      <div class="step"><b>3. بناء المقاييس</b><span>Revenue, Profit, Orders, AOV, ROAS.</span></div>
+      <div class="step"><b>4. تسليم اللوحة</b><span>Dashboard واضح مع اختبار تحديث البيانات.</span></div>
+    </section>
+  </main>
+</body>
+</html>
+
